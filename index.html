@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Tracker</title>
+
+    <!---Add Bootstrap cdn-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--Add font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!---Add external CSS file-->
+    <link rel="stylesheet" href="project.css">
+    <script>
+        if(JSON.parse(localStorage.getItem("basecurrency") == null)){
+            localStorage.setItem("basecurrency",JSON.stringify("USD"));
+        }
+    </script>
+</head>
+
+<body>
+    <!---Header of the home page-->
+    <div class="bodycontainer">
+        <header>
+            <div class="header-top container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-auto header-top-content">
+                                Call us: (888) 888-6666
+                            </div>
+                            <div class="col-auto header-top-content">
+                                Email: fundapp@FundTracker.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 proverb p-2">
+                        Do not save what is left after spending, but spend what is left after saving.<br> – Warren
+                        Buffett
+                    </div>
+                </div>
+            </div>
+            <div class="header-body container-fluid">
+                <div class="row" id="ain">
+                    <div class="col-2 text-center">
+                        <a href="index.html" title="Fund Tracker">
+                            <img id="logoimage" src="images/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col-8 pt-2">
+                        <nav class="navbar navbar-expand-lg">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown mr-3">
+                                    <a class="nav-link border-nav p-2 linktext">WHY FUND TRACKER?</a>
+                                    <div class="dropdown-content">
+                                        <a href="about_us.html"><span class="dropdown-content-style">About Us</span></a>
+                                        <a href="contact_us.html"><span class="dropdown-content-style">Contact
+                                                Us</span></a>
+                                    </div>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="dashboard.html" class="nav-link border-nav p-2 linktext">DASHBOARD</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="account.html" class="nav-link border-nav p-2 linktext">ACCOUNT</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="transaction.html" class="nav-link border-nav p-2 linktext">TRANSACTION</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="report.html" class="nav-link border-nav p-2 linktext">REPORT</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="setting.html" class="nav-link border-nav p-2 linktext">SETTING</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <div class="col-2 quotefont">
+                        "A day late and a dollor short!"
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!---Header of the home page end -->
+
+        <!-- Body of the home page start -->
+        <!---cover image section of the body -->
+        <main>
+            <div class="container-fluid p-0 position-relative">
+                <img src="images/dollor.jpg" class="coverimage" alt="dollorcoverimage">
+                <div class="w-100 titlefont">
+                    <p class="titlefontstyle">FUND TRACKER</p>
+                </div>
+            </div>
+
+            <!--card view of the each navigation block start-->
+            <div class="cardcontainer">
+                <div class="innercardcontainer">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="cardviewtitle">
+                                CLASSIFICATION
+                            </h2>
+                        </div>
+                        <div class="col-12 cardviewbody">
+                            <div class="row">
+                                <div class="col-3 cardbody">
+                                    <div class="row no-gutters mb-4">
+                                        <div class="col-12">
+                                            <div class="row cardeffect">
+                                                <div class="col-12 text-align-center pt-3">
+                                                    <ul class="cardicon_1">
+                                                        <li class="cardicon_2">
+                                                            <i class="fa fa-dashboard"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 cardfooter">
+                                                    <h3 class="cardtitle">
+                                                        <a href="dashboard.html">DASHBOARD</a>
+                                                    </h3>
+                                                    <div class="cardbutton">
+                                                        <a href="dashboard.html">
+                                                            SHOW DASHBOARD
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="show_hidden" style="text-align: center;">
+                                                    Dashboard is the place where one can explore their overall
+                                                    application at one glance.
+                                                    User can get information regarding their net overall worth. User can
+                                                    add expense, tranfer funds, and add income to the current
+                                                    account. Dashboard Show your all recent transaction.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 cardbody">
+                                    <div class="row no-gutters mb-4">
+                                        <div class="col-12">
+                                            <div class="row cardeffect">
+                                                <div class="col-12 text-align-center pt-3">
+                                                    <ul class="cardicon_1">
+                                                        <li class="cardicon_2">
+                                                            <i class="fa fa-credit-card"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 cardfooter">
+                                                    <h3 class="cardtitle">
+                                                        <a href="account.html">ACCOUNT</a>
+                                                    </h3>
+                                                    <div class="cardbutton">
+                                                        <a href="account.html">
+                                                            SHOW ACCOUNT
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="show_hidden" style="text-align: center;">
+                                                    Account page where user add new account in order to categories
+                                                    source of income into different account.
+                                                    It shows pre-defined account categories in which user can add
+                                                    account and add fund to that account.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 cardbody">
+                                    <div class="row no-gutters mb-4">
+                                        <div class="col-12">
+                                            <div class="row cardeffect">
+                                                <div class="col-12 text-align-center pt-3">
+                                                    <ul class="cardicon_1">
+                                                        <li class="cardicon_2">
+                                                            <i class="fa fa-exchange"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 cardfooter">
+                                                    <h3 class="cardtitle">
+                                                        <a href="transaction.html">TRANSACTION</a>
+                                                    </h3>
+                                                    <div class="cardbutton">
+                                                        <a href="transaction.html">
+                                                            SHOW TRANSACTION
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="show_hidden" style="text-align: center;">
+                                                    Transaction page where recent transaction is display based on the
+                                                    three categories: Expense, transfer, and income. User can add
+                                                    expense, can transfer fund between accounts and add income to the
+                                                    accounts.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 cardbody">
+                                    <div class="row no-gutters mb-4">
+                                        <div class="col-12">
+                                            <div class="row cardeffect">
+                                                <div class="col-12 text-align-center pt-3">
+                                                    <ul class="cardicon_1">
+                                                        <li class="cardicon_2">
+                                                            <i class="fa fa-bar-chart"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 cardfooter">
+                                                    <h3 class="cardtitle">
+                                                        <a href="report.html">REPORT</a>
+                                                    </h3>
+                                                    <div class="cardbutton">
+                                                        <a href="report.html">
+                                                            SHOW REPORT
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="show_hidden" style="text-align: center;">
+                                                    Report shows monthly generated report of the user in the form of
+                                                    graph. It shows the graphical representstion of data. So that user
+                                                    comes to know their overall scenario that either they are in profit
+                                                    or loss.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--card view of the each navigation block end -->
+
+            <!---form section of the body start -->
+            <div class="container-fluid p-0  formbackground">
+                <div class="row no-gutters formbackgroundcolor">
+                    <div class="col-6 border-right border-white">
+                        <div class="formpadding">
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <h2 class="formtitle ">BECOME AN EXPERT TODAY</h2>
+                                    <p class="formparagraph">
+                                        Get the tools you need to meet your expectations and gain access
+                                        to the most comprehensive fund tracker solution.
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <form action="#" method="post">
+                                        <div class="row no-gutters">
+                                            <div class="col-12">
+                                                <input class="formtext" type="text" name="expert_name"
+                                                    placeholder="Your Name*:" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input class="formtext" type="email" name="expert_email"
+                                                    placeholder="Email Address*:" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input class="formtext" type="tel" name="expert_phone_no"
+                                                    placeholder="Phone Number*: 123-123-11234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                    required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input class="formsubmitbutton" type="submit" value="submit">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="formpadding">
+                            <div class="row no-gutters">
+                                <div class="col-12">
+                                    <h2 class="formtitle ">GET AN INSPIRATIONAL QUOTES</h2>
+                                    <p class="formparagraph">
+                                        Complete the form below to receive inspirational quotes. We'll keep you
+                                        motivated.
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <form action="#" method="post">
+                                        <div class="row no-gutters">
+                                            <div class="col-12">
+                                                <input class="formtext" type="text" name="quote_name"
+                                                    placeholder="Your Name*:" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input class="formtext" type="email" name="quote_email"
+                                                    placeholder="Email Address*:" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input class="formtext" type="tel" name="quote_phone_no"
+                                                    placeholder="Phone Number*: 123-123-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                    required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input class="formsubmitbutton" type="submit" value="send a quote">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <!-- Body of the home page end -->
+
+        <!-- Footer of the home page start -->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 footercontent">
+                            Copyright(C) 2021
+                            <a href="index.html">fundtracker.com</a>
+                            All Rights Reserved | 123 A B St #123, Charlotte, NC 28269
+                        </div>
+                        <div class="col-12">
+                            <ul class="socialicon">
+                                <li>
+                                    <a href="https://www.facebook.com/">
+                                        <i class="fa fa-facebook-square fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/">
+                                        <i class="fa fa-linkedin-square fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/">
+                                        <i class="fa fa-twitter-square fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/">
+                                        <i class="fa fa-youtube-square fa-2x"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 validator">
+                            <a href="https://validator.w3.org">Validate HTML</a> |
+                            <a href="https://jigsaw.w3.org/css-validator/">Validate CSS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer of the home page end-->
+    </div>
+
+    <!-- accessibility navigator -->
+    <div class="to-up d-block">
+        <a href="#ain">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+</body>
+
+</html>

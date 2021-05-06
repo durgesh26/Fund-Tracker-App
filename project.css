@@ -1,0 +1,956 @@
+/* This is the css file for the project. */
+
+/*********************** styling css for the index.html page of the project **********************/
+
+/*styling for the smooth scrolling*/
+html {
+    scroll-behavior: smooth;
+  }
+
+/*styling for the body container*/
+.bodycontainer{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* styling for the header-top */
+.header-top{
+    background-color:#57C1E8;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* styling for the header-top-content */
+.header-top-content{
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid rgba(255,255,255,.2);
+    ;
+}
+
+.proverb{
+    text-align: right;
+    font-size: 11px;
+}
+
+/* styling for header-body */
+.header-body{
+    padding:30px 18px;
+}
+
+/* styling for the image-logo on the left hand side navigation bar */
+#logoimage{
+    width: 120%;
+    height: 60px;
+    vertical-align: middle;
+}
+
+/* styling for text of the navigation bar*/
+.linktext{
+    font-size: 14px;
+    color: #202020;
+    font-weight: bold;
+    line-height: 11px;
+    cursor: pointer;
+}
+
+/* styling for border around navigation tab*/
+.border-nav{
+	background-color:white;
+	border:1px solid transparent;
+	transition: all 0.3s ease-in-out;
+}
+
+/* styling to generate hover effect around each navigation tab*/
+.border-nav:hover{
+    border: 1px solid #57C1E8;
+    color: #57C1E8;
+}
+
+/* styling for navigation bar*/
+.navbar{
+    justify-content: center;
+}
+
+/* styling for dropdown menu in navidation bar*/
+.dropdown{
+    display: inline-block;
+}
+
+/*styling to replace the original effect back for navigation tab*/
+.dropdown:hover .border-nav{
+	border:1px solid #57C1E8;
+	color:#57C1E8;
+}
+
+/* styling for dropdown menu*/
+.dropdown-content{
+	min-width:166px;
+	position: absolute;
+	background-color:white;
+	z-index: 10;
+	border:1px solid rgba(32,32,32,0.2);
+	display: block;
+    overflow: hidden;
+    transform: scaleY( 0 );
+    transition: transform 0.3s ease, max-height 0.3s step-end, max-width 0.3s step-end, padding 0.3s step-end;
+    transform-origin: 0% 0%;
+}
+
+/* styling for content inside dropdown menu*/
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    text-align:left;
+    font-weight: 400;
+    text-decoration:none;
+	border-bottom:1px solid rgba(32,32,32,0.2);
+	background-color:#fff;	
+  
+}
+
+/* styling for hover content inside dropdown menu*/
+.dropdown-content a:hover{
+	text-decoration:none;
+}
+
+/* styling to visible the dropdown menu*/
+.dropdown:hover .dropdown-content {
+    display: block;
+    overflow: visible;
+    max-height: 3000px;
+    max-width: 3000px;
+    transform: scaleY( 1 );
+}
+
+/* styling for the dropdown content inside span tag*/
+.dropdown-content-style{
+    font-size: 14px;
+    transition: all 0.5s;
+}
+
+/* styling for the hover effect of dropdown content inside span tag*/
+.dropdown-content-style:hover{
+   padding-left: 15px;
+   color: #57C1E8;
+}
+
+/* Styling for the font of quote inside header*/
+.quotefont{
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*styling for the hover effect in the quote*/
+.quotefont:hover{
+    color:white;
+    text-shadow: 1px 1px 2px black, 0 0 25px #57C1E8, 0 0 5px darkblue;
+}
+
+/*styling for cover image*/
+.coverimage{
+    width: 100%;
+    height: 500px;
+    background: rgba(51,51,51,0.65);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+/*styling for the title over the cover image*/
+.titlefont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*stylinf for the title font style over the cover image*/
+.titlefontstyle{
+    color: #5a4b4b;
+    font-size: 80px;
+    overflow: hidden;
+    font-weight: 700;
+    text-align: center;
+    min-width: 100%;
+    margin-bottom: 0px;
+}
+
+/*styling to give hover effect for th title font*/
+.titlefontstyle:hover{
+    text-shadow: 1px 1px 2px black, 0 0 25px #57C1E8, 0 0 5px darkblue;
+}
+
+/*styling for  the background for the formsection inside body section*/
+.formbackground{
+    background-image: url(images/formbackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*styling for the backround color on form image*/
+.formbackgroundcolor{
+    background-color: rgba(87,193,232,0.95);
+}
+
+/*styling to apply padding inside form*/
+.formpadding{
+    padding: 100px;
+}
+
+/*styling for the form title*/
+.formtitle{
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    color: #ffffff;
+    text-align: left;
+}
+
+/*styling for section divider in form section*/
+.formtitle::before{
+    left:-15px;
+	content: "";
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    height: 7px;
+    background: url(images/sectiondivider.png) no-repeat center;
+}
+
+/*styling for the form paragraph text*/
+.formparagraph{
+    color:#fff;
+    margin-bottom: 40px;
+}
+
+/*styling for the form input area*/
+.formtext{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+    font-size: 15px;
+}
+
+/*styling color for placeholder*/
+.formtext::placeholder{
+    color:#fff;
+}
+
+/*styling for the form submit button*/
+.formsubmitbutton{
+    min-width: 145px;
+    line-height: 20px;
+    background: #ffffff;
+    color: #202020;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 20px;
+    border: 1px solid #f1f1f1;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/*styling to give hover effect on the form submit button*/
+.formsubmitbutton:hover{
+    color:#57C1E8;
+}
+
+/*styling for the card view container*/
+.cardcontainer{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/*styling for the inner card view container*/
+.innercardcontainer{
+    padding: 20px 15px 0px 15px;
+    width: 100%;
+}
+
+/*styling for the card view title*/
+.cardviewtitle{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #202020;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 20px 0px 25px;
+    text-align: center;
+}
+
+/*styling for the divider for the card view title*/
+.cardviewtitle::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100px;
+    height: 7px;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    background: url(images/divider.png) no-repeat center;
+}
+
+/*stylig for the card view body*/
+.cardviewbody{
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+/*styling for the card body*/
+.cardbody{
+    padding-top: 35px;
+}
+
+/*styling for the card effect*/
+.cardeffect{
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+}
+
+/*styling for the hover effect of shadow on the card*/
+.cardeffect:hover{
+    box-shadow: 0 0 10px 1px #ccc;
+}
+
+
+.show_hidden{
+    display: none;
+    padding: 5px 5px 10px;
+}
+
+
+.cardeffect:hover .show_hidden{
+   display: block;
+   background: #FFF;
+   position: absolute;
+   top:240px;
+   z-index: 9;
+   -webkit-box-shadow: 0 0 4px 0 rgb(0 0 0 / 15%);
+   -moz-box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+   box-shadow: 0 0 4px 0 rgb(0 0 0 / 15%);
+}
+
+/*styling for the card icon*/
+.cardicon_1{
+    display: inline-block;
+    margin: 5px 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+/*styling for the card icon*/
+.cardicon_2{
+    font-size: 40px;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    display: inline-block;
+    /* float: left; */
+    border-radius: 50%;
+    margin: 0 19px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+/*styling for the hover effecct on the icon*/
+.cardicon_1 li::before{
+    box-shadow: 0 0 0 3px #57c1e8;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 2px;
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.3s;
+
+}
+
+/*styling for the hover effect on the card icon*/
+.cardicon_1 li:hover::before{
+    cursor: pointer;
+    transform: scale(1.3);
+    box-shadow: 0 0 0 3px #ffffff;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/*styling for the card footer*/
+.cardfooter{
+    padding: 42px 5px;
+    text-align: center;
+}
+
+/*styling for the card title*/
+.cardtitle{
+    margin: 0 0 10px;
+    line-height: 1.1;
+}
+
+/*styling for the card title*/
+
+.cardtitle a{
+    font-size: 25px;
+    font-weight: 600;
+    color: #202020;
+    margin-bottom: 25px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+/*styling for the fover effect on the card title*/
+.cardtitle a:hover{
+    color: #57c1e8;
+    text-decoration: none;
+}
+
+/*styling for the card button*/
+.cardbutton{
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*styling for the card button*/
+.cardbutton a{
+    padding: 11px 19px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    background: #57c1e8;
+    color: #ffffff;
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+/*styling for the card button when hover on it*/
+.cardbutton a:hover{
+    background-color: #ffffff;
+    color: #57c1e8;
+    text-decoration: none;
+    border: 1px solid #57c1e8;
+}
+
+/*styling for the navigator accessibility*/
+.to-up{
+    bottom: 35px;
+    height: 40px;
+    position: fixed;
+    right: 15px;
+    width: 40px;
+    line-height: 37px;
+    z-index: 9999;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-align: center;
+    background-color: #57c1e8;
+    font-size: 17px;
+}
+
+/*styling for the navigator accessbility*/
+.to-up a{
+	color:#ffffff;
+	text-decoration:none;
+	
+}
+
+/*styling for the hover effect on the navigator button */
+.to-up:hover {
+    background-color: #082d4b;
+    color: #ffffff;
+	text-decoration:none;
+}
+
+/*styling for the footer section of the home page*/
+.footer{
+    padding: 20px 0px;
+    background-color: #1a1a1a;
+    color: #909090
+}
+
+/*styling for the footer copyright content*/
+.footercontent{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*styling for the footer content link*/
+.footercontent a{
+    color: #067ba7;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+/*styling for the hover effect on the footer content link*/
+.footercontent a:hover{
+    color: #57c1e8;
+    text-decoration: none;
+}
+
+/*styling for the social icon in the footer*/
+.socialicon{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+/*syling for the social icon into one line*/
+.socialicon li{
+    display: inline-block;
+}
+
+/*styling for the social icon color*/
+.socialicon li a {
+    color: #067ba7;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/*styling for the hover effect on the social icon*/
+.socialicon li a:hover{
+    color: #57c1e8;
+    text-decoration: none;
+}
+
+/*styling for the html and css validator*/
+.validator{
+    margin-top: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+/*styling for the color of html and css validator*/
+.validator a{
+    color: #067ba7;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/*styling for the hover effect on the html and css validator*/
+.validator a:hover{
+    color: #57c1e8;
+    text-decoration: none;
+}
+
+
+
+/*********************** styling css for the income.html page of the project **********************/
+
+/*styling for the cover image in the other page*/
+.moneyplantimage{
+    background-color: #ededed;
+    background-position: center top;
+    width: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    background-image:url(images/moneyplant.jpg)
+}
+
+/*styling to apply opacity on the cover image*/
+.moneyplantimage::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51,51,51,0.65);
+}
+
+/*styling to apply padding around the text on cover image*/
+.imagepad{
+    padding-top: 125px ;
+    padding-bottom: 125px;
+}
+
+/*styling for the page title over the cover image*/
+.pagetitle{
+    margin: 0;
+    float: none;
+    color: #fff;
+    font-size: 65px;
+    padding: 0;
+    border: 0;
+    display: inline-block;
+    overflow: hidden;
+    font-weight: 700;
+    min-width: 100%;
+    text-align: center;
+}
+
+/*styling for the hover effect on the title over the cover image*/
+.pagetitle span:hover{
+    text-shadow: 1px 1px 2px black, 0 0 25px #57c1e8, 0 0 5px darkblue;
+}
+
+
+/*********************** styling css for the contact_us.html page of the project **********************/
+
+/*styling for the wrapper around the each page content*/
+.wrapper{
+    padding: 110px 0px 75px;
+}
+
+/*styling for  the container around the form*/
+.con_us_container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/*styling for the contact us title container*/
+.con_us_title_container{
+    padding-left: 25px;
+    margin-bottom: 35px;
+}
+
+/*styling for the contact us title*/
+.con_us_title{
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    text-align: left;
+    color: #000000;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+/*styling for the section divder of the form*/
+.con_us_title::before{
+    right: 0;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 33px;
+    width: 100px;
+    height: 7px;
+    transform: translate(-50%,0);
+    background: url(images/sectiondividerblue.png) no-repeat center;
+}
+
+/*styling for the contact us submit button*/
+.con_us_submit{
+    color: #fff;
+    background-color: #57C1E9;
+    border: 1px outset;
+    padding: 10px 40px;
+    margin: 10px 0px 20px 24px;
+    transition: all 0.5s;
+    margin:10px 0px 0px 0px;
+}
+
+/*styling for the hover effect on the contact us submit button*/
+.con_us_submit:hover{
+    background-color: #fff;
+    color: #57C1E9;
+    border: 1px inset;
+}
+
+
+
+/*********************** styling css for the setting.html page of the project **********************/
+
+/*styling for the contact us title container*/
+.main_content{
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 1px #666;
+}
+
+/*styling for the setting accordain*/
+.setting_accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight:500;
+    transition: 0.5s;
+}
+
+/*styling for the hover effect on the accordain*/
+.setting_accordion:hover {
+    background-color: #57C1E8; 
+
+}
+/*styling to rotate + sign in accordion*/
+.rotate{
+    transform:rotate(45deg);
+    transition:1s;
+}
+
+button:focus{
+    outline: none;
+}
+/*styling for the content inside the accordain*/  
+.accordion_panel{
+    padding: 0 18px;
+    /* display: none; */
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*styling for the reset button in setting*/
+.resetbutton{
+    padding: 11px 19px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    background: #57c1e8;
+    color: #ffffff;
+    transition: all 0.5s;
+    border-radius: .25em;
+    border:none
+}
+
+/*styling for the hover effect on the reset button in setting page*/
+.resetbutton:hover{
+    background-color: #ffffff;
+    color: #57c1e8;
+    text-decoration: none;
+    border: 1px solid #57c1e8;
+}
+/*Styling for the base currency dropdown*/
+.basecurrency{
+    width: 100%;
+    padding:10px;
+}
+/*styling for the hover effect on the basecurrency input field*/
+.basecurrency:hover{
+    box-shadow: 0 0 5px 1px #57c1e8;
+}
+/*styling for the enter amount input field*/
+.amount_input{
+    width:25%;
+    padding:8px;
+}
+
+/*styling for the hover effect on the currency and input field*/
+.currency:hover, .amount_input:hover{
+    box-shadow: 0 0 5px 1px #57c1e8;
+}
+
+/*styling for the display currency dropdown*/
+.currency{
+    width:70%;
+    padding:10px;
+}
+
+
+
+/******************************** Styling for the account page*******************************/
+
+/*styling for the new button modal*/
+.new_modal_button, .modal_form_submit, .close_modal_button{
+    padding: 10px 20px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    background: #57c1e8;
+    color: #ffffff;
+    transition: all 0.5s;
+    border:none;
+    border-radius: .25em;
+}
+
+/*styling to add hover effect on the new modal button*/
+
+.new_modal_button:hover, .modal_form_submit:hover, .close_modal_button:hover{
+    background-color: #ffffff;
+    color: #57c1e8;
+    text-decoration: none;
+    border: 1px solid #57c1e8;
+}
+
+/*styling for the form inside modal*/
+.modalform{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px 18px;
+    border: 2px solid #57c1e8;
+    background: transparent;
+    outline: none;
+    font-size: 15px;
+}
+
+/*styling for the placeholder inside modalform */
+.modalform::placeholder{
+    color:rgb(0,0,0,0.5);
+}
+
+/*styling for the accordion in account page*/
+.account_accordion{
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight:500;
+    transition: 0.5s;
+    margin: 0px;
+}
+
+/*styling for the fover effect on account accordion*/
+.account_accordion:hover{
+    background-color: #57C1E8; 
+
+}
+
+/*styling for the pannel inside accordion*/
+.account_pannel{
+    padding: 0 18px;
+    /* display: none; */
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/*************************** Styling for the about us page*******************************/
+
+/*Styling for padding in the about us section*/
+
+.aboutuspad{
+    padding:100px 140px 90px;
+}
+
+
+
+/*************************** Styling for the transaction page*******************************/
+
+/*styling for the tabs inside modal */
+.tablinks{
+   padding: 10px;
+   text-align: center;
+   cursor: pointer;
+    color:black;
+}
+
+/*styling for the hover effect on te tablinks*/
+.tablinks:hover{
+    background-color: #57C1E8;
+    color: #fff;
+}
+
+/*styling to display active tag when user select tabs*/
+ .activetab{
+    background-color: #57C1E8;
+    color:white;
+}
+
+/*styling for the content of the tabs*/
+.tabcontent{
+    display: none;
+}
+
+
+.tab1{
+    display: block;
+}
+
+/*styling for the transaction details*/
+.transaction_details{
+    padding: 10px 15px 10px 15px;
+    border-top: 1px solid #57C1E8;
+    border-bottom: 1px solid #57C1E8;
+    
+}
+
+/**********Styling for the dashboard.css***********/
+
+
+/*Styling for the accordion in the dashboard page*/
+.dashboard_accordion{
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border-bottom: 1px solid #57C1E8;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight:500;
+    transition: 0.5s;
+    margin: 0px;
+
+}
+/*styling for the hover effect on accordion*/
+.dashboard_accordion:hover{
+    background-color: #57C1E8; 
+}
+ 
+/*styling fo the accordion inside net worth section*/
+.dashboard_account_accordion{
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    padding:8px;
+    border:none;
+    border-radius: 1.25em;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-weight:500;
+    transition: 0.5s;
+    margin: 0px;
+}
+
+/*styling for the hover effect in accordion*/
+.dashboard_account_accordion:hover{
+    background-color: #57C1E8; 
+}
+
+/*styling  for the pannel inside accordion*/
+.panels{
+    font-size: 13px;
+}
+
+/*styling to give border to accordion*/
+.border_accordion{
+    border-bottom: 2px solid #57C1E8;
+}

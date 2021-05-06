@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Tracker</title>
+
+
+
+
+
+
+
+
+    <!---Add Bootstrap cdn-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!--Add font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!---Add external CSS file-->
+    <link rel="stylesheet" href="jqueryui/jquery-ui.min.css">
+    <link rel="stylesheet" href="project.css">
+    <!---Add jquery library-->
+    <script src="jquery/jquery.js"></script>
+    <script src="jqueryui/jquery-ui.min.js"></script>
+    <script src="js/transaction.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!---Header of the expenditure page start-->
+    <div class="bodycontainer">
+        <header>
+            <div class="header-top container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-auto header-top-content">
+                                Call us: (888) 888-6666
+                            </div>
+                            <div class="col-auto header-top-content">
+                                Email: fundapp@FundTracker.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 proverb p-2">
+                        Do not save what is left after spending, but spend what is left after saving.<br> – Warren
+                        Buffett
+                    </div>
+                </div>
+            </div>
+            <div class="header-body container-fluid">
+                <div class="row" id="ain">
+                    <div class="col-2 text-center">
+                        <a href="index.html" title="Fund Tracker">
+                            <img id="logoimage" src="images/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col-8 pt-2">
+                        <nav class="navbar navbar-expand-lg">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown mr-3">
+                                    <a class="nav-link border-nav p-2 linktext">WHY FUND TRACKER?</a>
+                                    <div class="dropdown-content">
+                                        <a href="about_us.html"><span class="dropdown-content-style">About Us</span></a>
+                                        <a href="contact_us.html"><span class="dropdown-content-style">Contact
+                                                Us</span></a>
+                                    </div>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="dashboard.html" class="nav-link border-nav p-2 linktext">DASHBOARD</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="account.html" class="nav-link border-nav p-2 linktext">ACCOUNT</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="transaction.html" class="nav-link border-nav p-2 linktext">TRANSACTION</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="report.html" class="nav-link border-nav p-2 linktext">REPORT</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a href="setting.html" class="nav-link border-nav p-2 linktext">SETTING</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <div class="col-2 quotefont">
+                        "A day late and a dollor short!"
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header of the expenditure page end-->
+
+        <!---body of the expenditure page start-->
+        <main>
+            <div class="row no-gutters">
+                <div class="col-12 moneyplantimage">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 imagepad">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h1 class="pagetitle"><span>TRANSACTION</span></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 m-3">
+                    <div class="main_content">
+                        <div class="p-3">
+                            <button class="new_modal_button" type="button" data-toggle="modal"
+                                data-target="#formmodal">New</button>
+                        </div>
+                        <div class="modal fade " tabindex="-1" id="formmodal" data-backdrop="static"
+                            data-keyboard="false">
+                            <div class="modal-dialog  modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="badge pr-2 mt-2">
+                                            <i class="fa fa-file" style="font-size:1.5em;"></i>
+                                        </span>
+                                        <h4 class="modal-title">New Tansaction</h4>
+                                        <button class="close" type="button" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <div class="row no-gutters" id="tab">
+                                            <div class="col-12">
+                                                <div class="row tabs no-gutters">
+                                                    <div class="col-4 tablinks activetab" id="tab1">
+                                                        Expense
+                                                    </div>
+                                                    <div class="col-4 tablinks" id="tab2">
+                                                        Transfer
+                                                    </div>
+                                                    <div class="col-4 tablinks" id="tab3">
+                                                        Income
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="tabcontent tab1">
+                                                    <div class="row">
+                                                        <div class="col-12"> <label for="expense_accounts"
+                                                                class="mb-1">From</label></div>
+                                                        <div class="col-8">
+
+                                                            <select name="account_group" id="expense_accounts"
+                                                                class="modalform">
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="number" name="amount" class="modalform"
+                                                                placeholder="Amount*" id="expense_amount" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12"> <label for="expense_tags"
+                                                                class="mb-1">Tags</label></div>
+                                                        <div class="col-8">
+
+                                                            <select name="account_group" id="expense_tags"
+                                                                class="modalform">
+                                                                <option value="Groceries">Groceries</option>
+                                                                <option value="Restaurant">Restaurant</option>
+                                                                <option value="Rent">Rent</option>
+                                                                <option value="Income tax">Income tax</option>
+                                                                <option value="Medical">Medical</option>
+                                                                <option value="Utilities">Utilities</option>
+                                                                <option value="Food">Food</option>
+                                                                <option value="Shopping">Shopping</option>
+                                                                <option value="Other">Other</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="type" class="modalform datepicker"
+                                                                placeholder="MM/DD/YYYY" id="expense_date" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <input type="text" name="note" class="modalform"
+                                                                placeholder="Note" id="expense_note" required>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="submit" class="modal_form_submit"
+                                                                value="Add Expense" id="submit_expense"
+                                                                data-dismiss="modal">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tabcontent tab2">
+                                                    <div class="row">
+                                                        <div class="col-12"> <label for="transfer_from"
+                                                                class="mb-1">From</label></div>
+                                                        <div class="col-8">
+
+                                                            <select name="account_group" id="transfer_from"
+                                                                class="modalform">
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="number" name="amount" class="modalform"
+                                                                placeholder="Amount*" id="transfer_amount" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12"> <label for="transfer_to"
+                                                                class="mb-1">To</label></div>
+                                                        <div class="col-8">
+
+                                                            <select name="account_group" id="transfer_to"
+                                                                class="modalform">
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="text" class="modalform datepicker"
+                                                                placeholder="MM/DD/YYYY" id="transfer_date" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <input type="text" name="note" class="modalform"
+                                                                placeholder="Note" id="transfer_note" required>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="submit" class="modal_form_submit"
+                                                                value="Add Transfer" id="submit_transfer"
+                                                                data-dismiss="modal">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tabcontent tab3">
+                                                    <div class="row">
+                                                        <div class="col-12"> <label for="income_accounts"
+                                                                class="mb-1">To</label></div>
+                                                        <div class="col-8">
+
+                                                            <select name="account_group" id="income_accounts"
+                                                                class="modalform">
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="number" name="amount" class="modalform"
+                                                                placeholder="Amount*" id="income_amount" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12"> <label for="income_tags"
+                                                                class="mb-1">Tags</label></div>
+                                                        <div class="col-8">
+
+                                                            <select name="account_group" id="income_tags"
+                                                                class="modalform">
+                                                                <option value="Salary">Salary</option>
+                                                                <option value="Bonus">Bonus</option>
+                                                                <option value="Other">Other</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="text" class="modalform datepicker"
+                                                                placeholder="MM/DD/YYYY" id="income_date" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <input type="text" name="note" class="modalform"
+                                                                placeholder="Note" id="income_note" required>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <input type="submit" class="modal_form_submit"
+                                                                value="Add Income" id="submit_income"
+                                                                data-dismiss="modal">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="close_modal_button"
+                                            data-dismiss="modal">close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-12 border">
+                                <div class="row no-gutters p-2 pl-3 pr-3">
+                                    <div class="col-12 p-1" id="transactions">
+                                        No transaction found.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row no-gutters">
+                                    <div class="col-7"></div>
+                                    <div class="col-5">
+                                        <div class="row no-gutters">
+                                            <div class="col-12 p-3 border-bottom">
+                                                Total income
+                                                <span id="total_income" style="float:right;color:green">0 <span class="currency">USD</span></span>
+                                            </div>
+                                            <div class="col-12 p-3 border-bottom">
+                                                Total expense
+                                                <span id="total_expense" style="float:right;color:rgb(242,92,92)">0 <span class="currency">USD</span></span>
+                                            </div>
+                                            <div class="col-12 p-3 ">
+                                               <span id="total_trans" style="float:right">0 <span class="currency">USD</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <!-- Body of the expenditure page end-->
+
+
+        <!---Footer of the expenditure page start -->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 footercontent">
+                            Copyright(C) 2021
+                            <a href="index.html">fundtracker.com</a>
+                            All Rights Reserved | 123 A B St #123, Charlotte, NC 28269
+                        </div>
+                        <div class="col-12">
+                            <ul class="socialicon">
+                                <li>
+                                    <a href="https://www.facebook.com/">
+                                        <i class="fa fa-facebook-square fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/">
+                                        <i class="fa fa-linkedin-square fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/">
+                                        <i class="fa fa-twitter-square fa-2x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/">
+                                        <i class="fa fa-youtube-square fa-2x"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 validator">
+                            <a href="https://validator.w3.org">Validate HTML</a> |
+                            <a href="https://jigsaw.w3.org/css-validator/">Validate CSS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer of the expenditure page end -->
+    </div>
+
+    <!-- accessbility navigator -->
+    <div class="to-up d-block">
+        <a href="#ain">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>
